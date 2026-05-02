@@ -1,0 +1,173 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "subscriber",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "unverifiedReport",
+						"type": "bytes"
+					},
+					{
+						"internalType": "address",
+						"name": "quoteAddress",
+						"type": "address"
+					}
+				],
+				"name": "getFeeAndReward",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "assetAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Common.Asset",
+						"name": "",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "assetAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Common.Asset",
+						"name": "",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "i_linkAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "i_nativeAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "i_rewardManager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getFeeAndReward(address,bytes,address)": {
+					"params": {
+						"quoteAddress": "The payment token address used for quoting fees and rewards.",
+						"subscriber": "The address attempting to verify the report. A discount is applied if this address is recognized as a subscriber.",
+						"unverifiedReport": "The report data awaiting verification. The content of this report is used to determine the base fee and reward, before considering subscriber discounts."
+					},
+					"returns": {
+						"_0": "fee The fee assessed for verifying the report, with subscriber discounts applied where applicable.",
+						"_1": "reward The reward allocated to the caller for successfully verifying the report.",
+						"_2": "totalDiscount The total discount amount deducted from the fee for subscribers"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getFeeAndReward(address,bytes,address)": {
+					"notice": "Calculates the fee and reward associated with verifying a report, including discounts for subscribers. This function assesses the fee and reward for report verification, applying a discount for recognized subscriber addresses."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IFeeManager.sol": "IFeeManager"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts@1.3.0/src/v0.8/llo-feeds/libraries/Common.sol": {
+			"keccak256": "0xc62ed807abb37c89f59c93eaaf8bd08e9e424c8451614d936247a31468e3e1d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b27a40291586a6b6ae313308d31ab0a994c4c9d1ce542eaf80df1cf8d3c364e",
+				"dweb:/ipfs/QmZEkT2Cy2mQE3WPKtoB9pUJtSdreWXCZ6c4xy8YvbkF5E"
+			]
+		},
+		"contracts/interfaces/IFeeManager.sol": {
+			"keccak256": "0x7dd6b5035db8e064d567ec7fe678c077e731acc4e161ef4482006b5f4414f213",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1118e6139454ead4d5da16a7878efed712c3f8dae7ce09355f8d82fe47f92790",
+				"dweb:/ipfs/QmXo9vY54WyiM8PghuRQjHufhirvwprPfRsEsyA6VpNcDW"
+			]
+		}
+	},
+	"version": 1
+}
