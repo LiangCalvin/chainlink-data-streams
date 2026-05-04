@@ -2,14 +2,6 @@
   "interfaces/IFeeManager.sol": {
     "__sources__": {}
   },
-  "contracts/LogEmitter.sol": {
-    "__sources__": {
-      "contracts/LogEmitter.sol": {
-        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\ncontract LogEmitter {\n    event Log(address indexed msgSender);\n\n    function emitLog() public {\n        emit Log(msg.sender);\n    }\n}",
-        "file": "contracts/LogEmitter.sol"
-      }
-    }
-  },
   "contracts/StreamsUpkeep.sol": {
     "@chainlink/contracts@1.3.0/src/v0.8/llo-feeds/libraries/Common.sol": ".deps/npm/@chainlink/contracts@1.3.0/src/v0.8/llo-feeds/libraries/Common.sol",
     "@chainlink/contracts@1.3.0/src/v0.8/automation/interfaces/StreamsLookupCompatibleInterface.sol": ".deps/npm/@chainlink/contracts@1.3.0/src/v0.8/automation/interfaces/StreamsLookupCompatibleInterface.sol",
@@ -88,5 +80,13 @@
   },
   "contracts/interfaces/IVerifierProxy.sol": {
     "@chainlink/contracts@1.3.0/src/v0.8/llo-feeds/v0.3.0/interfaces/IVerifierFeeManager.sol": ".deps/npm/@chainlink/contracts@1.3.0/src/v0.8/llo-feeds/v0.3.0/interfaces/IVerifierFeeManager.sol"
+  },
+  "contracts/LogEmitter.sol": {
+    "__sources__": {
+      "contracts/LogEmitter.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\ncontract LogEmitter {\n    event Log(address indexed msgSender);\n\n    function emitLog() public {\n        emit Log(msg.sender);\n    }\n}",
+        "file": "contracts/LogEmitter.sol"
+      }
+    }
   }
 }
